@@ -8,8 +8,6 @@ ports:
     onOpen: open-preview
 tasks:
   - init: pip3 install -r requirements.txt
-    command: python3 server.py
-    name: Server
-  - command: gp await-port 5555 && python3 game.py
+  - command: python3 game.py
     openMode: split-right
     name: Client
